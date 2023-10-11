@@ -1,15 +1,20 @@
 .home-background {
-  position: relative;
+  background-color: black;
   background-image: url('/assets/images/background2.gif');
-  background-size: cover;   /* Asegura que el GIF cubra el área completa */
+  background-size: 100% 100%;   /* Asegura que el GIF cubra el área completa */
   background-repeat: no-repeat; /* Evita que el GIF se repita */
-  background-position: center; /* Centra el GIF */
+  background-position: center center; /* Centra el GIF */
   height: 100vh; /* Ocupa toda la altura de la ventana */
   width: 100vw; /* Ocupa todo el ancho */
   display: flex;
   flex-direction: column;
   align-items: center; /* Centra horizontalmente los elementos hijos */
   justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .center-button {
@@ -94,6 +99,9 @@
 }
 
 body, html {
+  background-color: black;
   margin: 0;
   padding: 0;
+  width: 100vw;
+  height: 100vh;
 }
