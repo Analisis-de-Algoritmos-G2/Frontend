@@ -1,0 +1,19 @@
+div {
+  padding: 10px;
+  min-width: 100px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background: linear-gradient(to right, #5c83e6, #5CE1E6);
+  font-family: 'ArcadeGamer', sans-serif;
+  font-size: 3em;
+  width: 700px;
+  height: 58px;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  overflow: hidden;
+}
+

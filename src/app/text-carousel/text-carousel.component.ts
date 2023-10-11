@@ -1,13 +1,13 @@
 import { Component} from '@angular/core';
 
 @Component({
-  selector: 'app-text-carousel-component',
-  templateUrl: './text-carousel-component.component.html',
-  styleUrls: ['./text-carousel-component.component.css']
+  selector: 'app-text-carousel',
+  templateUrl: './text-carousel.component.html',
+  styleUrls: ['./text-carousel.component.css']
 })
-export class TextCarouselComponentComponent {
+export class TextCarouselComponent {
 
-  texts = ['hola', 'mundo', 'cómo', 'estás'];
+  texts = ['Seguridad', 'Movilidad', 'Salud', 'Laboral', 'Educacion'];
   currentIndex = 0;
 
   onKeydown(event: KeyboardEvent) {

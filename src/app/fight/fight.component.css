@@ -1,17 +1,64 @@
-.top-box {
+:host {
   position: absolute;
+  top: 5%;
+  width: 90%;
+  height: 60px;
+  align-items: center;  /* Centrar verticalmente */
+  justify-content: center;
+}
+
+.flex-container {
   display: flex;
+}
+
+.top-box {
+  margin-right: 20px;
+  margin-left: 120px;
+  color: aliceblue;
+  display:flex;
   justify-content: center;
   align-items: center;
-  top: 35%; /* Ajusta según dónde quieras que aparezca en la parte superior */
-  left: 50%; /* Esto, junto con 'transform', centra el recuadro horizontalmente */
-  transform: translateX(-50%); /* Centra el recuadro horizontalmente */
-  width: 70%; /* Ajusta según tus necesidades */
-  height: 25%;
-  padding: 90px;
-  border: 2px solid #33333300;
-  border-radius: 10px;
+  top: 40px; /* Ajusta según dónde quieras que aparezca en la parte superior */
+  width: 800px; /* Ajusta según tus necesidades */
+  height: 80px;
+  border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1; /* Asegura que el recuadro esté encima del fondo */
-  background-color: rgba(147, 147, 147, 0.743);
+  background: linear-gradient(to right, rgb(8, 0, 255), #5c83e6);
+  font-family: 'ArcadeGamer', sans-serif;
+  font-size: 0.7em;
+}
+.top-box-info{
+  margin-right: 120px;
+  margin-left: 120px;
+  margin-top: 50px;
+  color: aliceblue;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  top: 400px; /* Ajusta según dónde quieras que aparezca en la parte superior */
+  width: 1170px; /* Ajusta según tus necesidades */
+  height: 60px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Asegura que el recuadro esté encima del fondo */
+  background: linear-gradient(to right, rgb(123, 0, 255), #b16ef3);
+  font-family: 'ArcadeGamer', sans-serif;
+  font-size: 0.7em;
+}
+.container-candi{
+  margin-right: 120px;
+  margin-left: 120px;
+  margin-top: 40px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 1170px; /* Ajusta según tus necesidades */
+  height: 400px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Asegura que el recuadro esté encima del fondo */
+  background-color: rgba(255, 255, 255, 0.202);
+  font-family: 'ArcadeGamer', sans-serif;
+  font-size: 0.7em;
 }
