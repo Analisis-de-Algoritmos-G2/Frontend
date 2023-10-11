@@ -1,25 +1,6 @@
-.home-background {
-  background-color: black;
-  background-image: url('/assets/images/background2.gif');
-  background-size: 100% 100%;   /* Asegura que el GIF cubra el área completa */
-  background-repeat: no-repeat; /* Evita que el GIF se repita */
-  background-position: center center; /* Centra el GIF */
-  height: 100vh; /* Ocupa toda la altura de la ventana */
-  width: 100vw; /* Ocupa todo el ancho */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra horizontalmente los elementos hijos */
-  justify-content: space-between;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
 .center-button {
   display: block; /* Aseguramos que el botón sea un bloque para aplicar márgenes */
-  margin:  auto; /* Margen superior e inferior de 40px y centrado horizontalmente */
+  margin:  center; /* Margen superior e inferior de 40px y centrado horizontalmente */
   padding: 10px 20px; /* Espaciado interno del botón */
   background-color: red; /* Color de fondo del botón */
   color: white; /* Color del texto del botón */
@@ -28,9 +9,11 @@
   cursor: pointer; /* Cambiar el cursor al pasar el ratón sobre el botón */
   font-size: 1.2em; /* Tamaño del texto */
   position: relative; /* Asegura un posicionamiento relativo */
-  z-index: 1;
+  z-index: 10;
   width: 80%;
   font-family: 'ArcadeGamer', sans-serif;
+  top: 350px;
+  right: -140px;
 }
 
 .center-button:hover {
