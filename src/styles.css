@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'GameOver';
+  src: url('/assets/fonts/game_over.ttf'); /* Cambia 'NOMBRE_DEL_ARCHIVO.ttf' al nombre real del archivo de fuente que descargaste */
+}
+@font-face {
+  font-family: 'ArcadeGamer';
+  src: url('/assets/fonts/ARCADE_I.TTF'); /* Cambia 'NOMBRE_DEL_ARCHIVO.ttf' al nombre real del archivo de fuente que descargaste */
+}

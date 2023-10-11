@@ -1,0 +1,99 @@
+.home-background {
+  position: relative;
+  background-image: url('/assets/images/background2.gif');
+  background-size: cover;   /* Asegura que el GIF cubra el área completa */
+  background-repeat: no-repeat; /* Evita que el GIF se repita */
+  background-position: center; /* Centra el GIF */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  width: 100vw; /* Ocupa todo el ancho */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente los elementos hijos */
+  justify-content: space-between;
+}
+
+.center-button {
+  display: block; /* Aseguramos que el botón sea un bloque para aplicar márgenes */
+  margin:  auto; /* Margen superior e inferior de 40px y centrado horizontalmente */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  background-color: red; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Eliminar el borde por defecto */
+  border-radius: 30px; /* Esquinas redondeadas */
+  cursor: pointer; /* Cambiar el cursor al pasar el ratón sobre el botón */
+  font-size: 1.2em; /* Tamaño del texto */
+  position: relative; /* Asegura un posicionamiento relativo */
+  z-index: 1;
+  width: 80%;
+  font-family: 'ArcadeGamer', sans-serif;
+}
+
+.center-button:hover {
+  background-color: #45a049; /* Cambiar el color de fondo al pasar el ratón sobre el botón */
+}
+
+.top-box {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 40px; /* Ajusta según dónde quieras que aparezca en la parte superior */
+  left: 50%; /* Esto, junto con 'transform', centra el recuadro horizontalmente */
+  transform: translateX(-50%); /* Centra el recuadro horizontalmente */
+  width: 90%; /* Ajusta según tus necesidades */
+  height: 12%;
+  padding: 20px;
+  border: 2px solid #33333300;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Asegura que el recuadro esté encima del fondo */
+  background: linear-gradient(to right, red, #5CE1E6);
+}
+
+.top-box-footer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 600px; /* Ajusta según dónde quieras que aparezca en la parte superior */
+  left: 50%; /* Esto, junto con 'transform', centra el recuadro horizontalmente */
+  transform: translateX(-50%); /* Centra el recuadro horizontalmente */
+  width: 90%; /* Ajusta según tus necesidades */
+  height: 12%;
+  padding: 20px;
+  border: 2px solid #33333300;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Asegura que el recuadro esté encima del fondo */
+  background: linear-gradient(to right, black, black);
+  gap: 150px;
+}
+
+.title-text {
+  font-family: 'ArcadeGamer', sans-serif;
+  font-size: 4em; /* Ajusta el tamaño del texto según prefieras */
+  color: white; /* Color del texto */
+  text-align: center; /* Centrar el texto en el recuadro */
+  font-weight: bold; /* Texto en negrita */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra en el texto para mejorar la legibilidad */
+}
+
+.footer-image-alcaldia {
+  width: 230px; /* Ajusta según el tamaño que desees para las imágenes */
+  height: auto; /* Mantiene el aspecto original de las imágenes */
+}
+
+.footer-image-jave {
+  width: 150px; /* Ajusta según el tamaño que desees para las imágenes */
+  height: auto; /* Mantiene el aspecto original de las imágenes */
+}
+
+.footer-image-x {
+  width: 100px; /* Ajusta según el tamaño que desees para las imágenes */
+  height: auto; /* Mantiene el aspecto original de las imágenes */
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
