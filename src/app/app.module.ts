@@ -5,13 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RulesComponent } from './rules/rules.component';
+import { FightComponent } from './fight/fight.component';
+import { TextCarouselComponentComponent } from './text-carousel-component/text-carousel-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    RulesComponent
+    RulesComponent,
+    FightComponent,
+    TextCarouselComponentComponent
   ],
+  exports: [TextCarouselComponentComponent],
   imports: [
     BrowserModule,
     AppRoutingModule

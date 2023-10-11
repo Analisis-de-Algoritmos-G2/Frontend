@@ -1,0 +1,75 @@
+.top-box {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 35%; /* Ajusta según dónde quieras que aparezca en la parte superior */
+  left: 50%; /* Esto, junto con 'transform', centra el recuadro horizontalmente */
+  transform: translateX(-50%); /* Centra el recuadro horizontalmente */
+  width: 70%; /* Ajusta según tus necesidades */
+  height: 25%;
+  padding: 90px;
+  border: 2px solid #33333300;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Asegura que el recuadro esté encima del fondo */
+  background-color: rgba(147, 147, 147, 0.743);
+}
+
+.top-box-init{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 40px; /* Ajusta según dónde quieras que aparezca en la parte superior */
+  left: 50%; /* Esto, junto con 'transform', centra el recuadro horizontalmente */
+  transform: translateX(-50%); /* Centra el recuadro horizontalmente */
+  width: 90%; /* Ajusta según tus necesidades */
+  height: 10%;
+  padding: 20px;
+  border: 2px solid #33333300;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Asegura que el recuadro esté encima del fondo */
+  background: linear-gradient(to right, red, #5CE1E6);
+}
+
+.text {
+  font-family: 'ArcadeGamer', sans-serif;
+  font-size: 1em; /* Ajusta el tamaño del texto según prefieras */
+  color: white; /* Color del texto */
+  text-align: center; /* Centrar el texto en el recuadro */
+  font-weight: bold; /* Texto en negrita */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra en el texto para mejorar la legibilidad */
+}
+
+.title-text{
+  font-family: 'ArcadeGamer', sans-serif;
+  font-size: 2.5em; /* Ajusta el tamaño del texto según prefieras */
+  color: white; /* Color del texto */
+  text-align: center; /* Centrar el texto en el recuadro */
+  font-weight: bold; /* Texto en negrita */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra en el texto para mejorar la legibilidad */
+}
+
+.start-button {
+  display: block; /* Aseguramos que el botón sea un bloque para aplicar márgenes */
+  margin:  center; /* Margen superior e inferior de 40px y centrado horizontalmente */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  background-color: red; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Eliminar el borde por defecto */
+  border-radius: 30px; /* Esquinas redondeadas */
+  cursor: pointer; /* Cambiar el cursor al pasar el ratón sobre el botón */
+  font-size: 1.2em; /* Tamaño del texto */
+  position: relative; /* Asegura un posicionamiento relativo */
+  z-index: 10;
+  width: 80%;
+  font-family: 'ArcadeGamer', sans-serif;
+  top: 600px;
+  right: -140px;
+}
+
+.start-button:hover {
+  background-color: #45a049; /* Cambiar el color de fondo al pasar el ratón sobre el botón */
+}

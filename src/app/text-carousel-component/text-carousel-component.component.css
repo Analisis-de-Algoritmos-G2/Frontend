@@ -1,0 +1,11 @@
+div {
+  border: 1px solid #ddd;
+  padding: 10px;
+  min-width: 100px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none; /* Esto evitará que el texto se seleccione al hacer doble clic */
+  z-index: 100;
+  background-color: #ddd;
+}

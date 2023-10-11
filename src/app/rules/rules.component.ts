@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component} from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-rules',
   templateUrl: './rules.component.html',
   styleUrls: ['./rules.component.css']
 })
-export class RulesComponent implements OnInit {
+export class RulesComponent {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  navigateToRules() {
+    this.router.navigateByUrl('/fight');
   }
-
 }
