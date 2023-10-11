@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { RulesComponent } from './rules/rules.component';
 import { FightComponent } from './fight/fight.component';
 import { TextCarouselComponent } from './text-carousel/text-carousel.component';
-import { PhotoCarouselComponent } from './photo-carousel/photo-carousel.component';
+import { CarouselComponent } from './carousel/carousel.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +15,7 @@ import { PhotoCarouselComponent } from './photo-carousel/photo-carousel.componen
     RulesComponent,
     FightComponent,
     TextCarouselComponent,
-    PhotoCarouselComponent
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
