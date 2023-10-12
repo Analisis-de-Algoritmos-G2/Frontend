@@ -1,3 +1,4 @@
+/* Boton de Inicio en el Home */
 .center-button {
   display: block; /* Aseguramos que el botón sea un bloque para aplicar márgenes */
   margin:  center; /* Margen superior e inferior de 40px y centrado horizontalmente */
@@ -5,7 +6,7 @@
   background-color: red; /* Color de fondo del botón */
   color: white; /* Color del texto del botón */
   border: none; /* Eliminar el borde por defecto */
-  border-radius: 30px; /* Esquinas redondeadas */
+  border-radius: 90px; /* Esquinas redondeadas */
   cursor: pointer; /* Cambiar el cursor al pasar el ratón sobre el botón */
   font-size: 1.2em; /* Tamaño del texto */
   position: relative; /* Asegura un posicionamiento relativo */
@@ -20,6 +21,7 @@
   background-color: #45a049; /* Cambiar el color de fondo al pasar el ratón sobre el botón */
 }
 
+/* Titulo de la App en recuadro superior */
 .top-box {
   position: absolute;
   display: flex;
@@ -31,13 +33,13 @@
   width: 90%; /* Ajusta según tus necesidades */
   height: 12%;
   padding: 20px;
-  border: 2px solid #33333300;
-  border-radius: 10px;
+  border-radius: 50px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1; /* Asegura que el recuadro esté encima del fondo */
   background: linear-gradient(to right, red, #5CE1E6);
 }
 
+/* Recuadro Inferior con logos*/
 .top-box-footer {
   position: absolute;
   display: flex;
@@ -47,10 +49,10 @@
   left: 50%; /* Esto, junto con 'transform', centra el recuadro horizontalmente */
   transform: translateX(-50%); /* Centra el recuadro horizontalmente */
   width: 90%; /* Ajusta según tus necesidades */
-  height: 12%;
+  height: 19%;
   padding: 20px;
   border: 2px solid #33333300;
-  border-radius: 10px;
+  border-radius: 80px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1; /* Asegura que el recuadro esté encima del fondo */
   background: linear-gradient(to right, black, black);

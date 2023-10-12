@@ -8,5 +8,10 @@
   <h1 class="title-text">Seleccione los Candidatos</h1>
 </div>
 <div class="container-candi">
-  <app-carousel></app-carousel>
+  <app-carousel side="left" [currentSlideIndex]="0"></app-carousel>
+  <img src="/assets/images/VS.png" alt="VS..." class="imagen-vs">
+  <app-carousel side="right" [currentSlideIndex]="0"></app-carousel>
 </div>
+<button class="center-button" (click)="navigate()">
+  Comenzar
+</button>

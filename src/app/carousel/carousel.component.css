@@ -1,0 +1,25 @@
+ngb-carousel img {
+  width: 300px; /* Ajusta el ancho según sea necesario */
+  height: 270px; /* Mantén esto como auto para mantener la proporción de la imagen */ /* Esto cortará la imagen si es necesario para llenar el área del carrusel */
+  transition: none !important;
+}
+
+.carousel-caption {
+  position: relative;
+  bottom: auto;
+  right: auto;
+  left: auto;
+  top: auto;
+  transform: none;
+  padding-top: 10px; /* Ajusta este valor si es necesario */
+}
+
+ngb-carousel .carousel-item {
+  transition: none !important;
+}
+
+ngb-carousel,
+ngb-carousel .carousel-inner {
+  width: 300px; /* Asegura que el carrusel tenga un ancho fijo */
+  height: 400px; /* Ajusta la altura según sea necesario */
+}

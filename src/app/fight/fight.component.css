@@ -50,6 +50,7 @@
   font-size: 0.7em;
 }
 .container-candi{
+  overflow: hidden;
   margin-right: 120px;
   margin-left: 120px;
   margin-top: 40px;
@@ -64,4 +65,32 @@
   background-color: rgba(255, 255, 255, 0.202);
   font-family: 'ArcadeGamer', sans-serif;
   font-size: 0.7em;
+  gap: 30px;
+}
+
+.imagen-vs {
+  width: 100px;  /* o el ancho que desees */
+  height: auto;  /* esto mantendrá la proporción de la imagen */
+}
+
+.center-button {
+  display: block; /* Aseguramos que el botón sea un bloque para aplicar márgenes */
+  margin:  center; /* Margen superior e inferior de 40px y centrado horizontalmente */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  background-color: red; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Eliminar el borde por defecto */
+  border-radius: 30px; /* Esquinas redondeadas */
+  cursor: pointer; /* Cambiar el cursor al pasar el ratón sobre el botón */
+  font-size: 1.2em; /* Tamaño del texto */
+  position: relative; /* Asegura un posicionamiento relativo */
+  z-index: 10;
+  width: 80%;
+  font-family: 'ArcadeGamer', sans-serif;
+  top: 35px;
+  right: -180px;
+}
+
+.center-button:hover {
+  background-color: #45a049; /* Cambiar el color de fondo al pasar el ratón sobre el botón */
 }

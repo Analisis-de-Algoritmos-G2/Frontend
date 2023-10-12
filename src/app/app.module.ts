@@ -8,6 +8,8 @@ import { RulesComponent } from './rules/rules.component';
 import { FightComponent } from './fight/fight.component';
 import { TextCarouselComponent } from './text-carousel/text-carousel.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { CandidateService } from './shared/candidate.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,7 @@ import { CarouselComponent } from './carousel/carousel.component';
     AppRoutingModule,
     NgbModule
   ],
-  providers: [],
+  providers: [CandidateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

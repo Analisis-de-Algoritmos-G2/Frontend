@@ -1,1 +1,67 @@
-<p>carousel works!</p>
+<ngb-carousel [interval]="0" [keyboard]="true" (slide)="onSlide($event)">
+
+  <ng-template ngbSlide>
+    <img src="/assets/images/none.png" alt="Imagen 1">
+    <div class="carousel-caption">
+      <h3>Seleccione</h3>
+      <p>El candidato</p>
+    </div>
+  </ng-template>
+
+  <ng-template ngbSlide>
+    <img src="/assets/images/galan.png" alt="Imagen 1">
+    <div class="carousel-caption">
+      <h3>Galan</h3>
+      <p>Partido Nuevo Liberalismo</p>
+    </div>
+  </ng-template>
+
+  <ng-template ngbSlide>
+    <img src="/assets/images/oviedo.png" alt="Imagen 2">
+    <div class="carousel-caption">
+      <h3>Oviedo</h3>
+      <p>Con Toda por Bogota</p>
+    </div>
+  </ng-template>
+
+  <ng-template ngbSlide>
+    <img src="/assets/images/vargas.png" alt="Imagen 2">
+    <div class="carousel-caption">
+      <h3>Vargas</h3>
+      <p>Partido Cambio Radical</p>
+    </div>
+  </ng-template>
+
+  <ng-template ngbSlide>
+    <img src="/assets/images/lara.png" alt="Imagen 2">
+    <div class="carousel-caption">
+      <h3>Lara</h3>
+      <p>Lara Democrata</p>
+    </div>
+  </ng-template>
+
+  <ng-template ngbSlide>
+    <img src="/assets/images/molano.png" alt="Imagen 2">
+    <div class="carousel-caption">
+      <h3>Molano</h3>
+      <p>Reconstruyamos Bogota</p>
+    </div>
+  </ng-template>
+
+  <ng-template ngbSlide>
+    <img src="/assets/images/robledo.png" alt="Imagen 2">
+    <div class="carousel-caption">
+      <h3>Robledo</h3>
+      <p>Partido Político Dignidad & Compromiso</p>
+    </div>
+  </ng-template>
+
+  <ng-template ngbSlide>
+    <img src="/assets/images/bolivar.png" alt="Imagen 2">
+    <div class="carousel-caption">
+      <h3>Bolivar</h3>
+      <p>Pacto Histórico Bogotá</p>
+    </div>
+  </ng-template>
+  <!-- Agrega más <ng-template ngbSlide> para más imágenes -->
+</ngb-carousel>
