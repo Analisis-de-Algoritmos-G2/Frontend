@@ -36,7 +36,7 @@ export class FightComponent implements OnInit{
 
   navigate() {
     console.log('Selected candidates:', this.selectedCandidates, 'Selected Topic: ', this.selectedTheme); // Log selected candidates
-    this.router.navigateByUrl('/fight');
+    this.router.navigateByUrl('/jug-izquierdo');
   }
 
 }
