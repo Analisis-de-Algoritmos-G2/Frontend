@@ -1,8 +1,17 @@
-<div class="background-image"></div> <!-- La imagen de fondo -->
-<div class="content-container">
-  <h1>Jugador 1</h1>
-  <img src="{{leftCandidateImage}}" alt="Imagen del jugador izquierdo" />
+<div class="top-box-info">
+  <h1 class="title-text">Nombre Candidato</h1>
 </div>
-<button class="center-button" >
-  siguiente
+<div class="container-candi">
+  <div class="content">
+    <div class="carousel-container">
+      <app-carousel side="left" [currentSlideIndex]="0"></app-carousel>
+    </div>
+    <div class="text-and-image">
+      <p>Las principales caracteristicas frente a el tema de  ...  son:</p>
+      <img src="tu-imagen.jpg">
+    </div>
+  </div>
+</div>
+<button class="center-button" (click)="navigate()">
+  Siguiente 
 </button>

@@ -19,7 +19,8 @@ export class CandidateService {
   }
   getCandidateImage(candidate: string) {
     // Implement this method to return the URL of the image for the specified candidate.
-    return `/assets/images/${candidate}.png`;
+    //return `/assets/images/${candidate}.png`;
+    return `/assets/images/bolivar.png`;
   }
 
 }

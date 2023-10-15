@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CandidateService } from '../shared/candidate.service';  // Importa CandidateService
 import { ThemeService } from '../shared/theme.service';
 
 @Component({
-  selector: 'app-fight',
-  templateUrl: './fight.component.html',
-  styleUrls: ['./fight.component.css']
+  selector: 'app-analisis-tweets',
+  templateUrl: './analisis-tweets.component.html',
+  styleUrls: ['./analisis-tweets.component.css']
 })
-export class FightComponent implements OnInit{
+export class AnalisisTweetsComponent {
   selectedTheme: string = 'Seguridad';
   selectedCandidates: { left?: string; right?: string } = {left:'NONE', right:'NONE'};  // Declara la propiedad para almacenar las selecciones
   leftCandidateImage: string = ''; // Add this line
@@ -42,7 +42,7 @@ export class FightComponent implements OnInit{
 
   navigate() {
     console.log('url img candidato', this.leftCandidateImage)
-    this.router.navigateByUrl('/jug-izquierdo', { state: { leftCandidateImage: this.leftCandidateImage } });
+    this.router.navigateByUrl('/debate-candidatos', { state: { leftCandidateImage: this.leftCandidateImage } });
 
   }
 }

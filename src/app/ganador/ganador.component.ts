@@ -6,11 +6,11 @@ import { CandidateService } from '../shared/candidate.service';  // Importa Cand
 import { ThemeService } from '../shared/theme.service';
 
 @Component({
-  selector: 'app-jug-derecho',
-  templateUrl: './jug-derecho.component.html',
-  styleUrls: ['./jug-derecho.component.css'],
+  selector: 'app-ganador',
+  templateUrl: './ganador.component.html',
+  styleUrls: ['./ganador.component.css']
 })
-export class JugDerechoComponent implements OnInit {
+export class GanadorComponent {
   leftCandidateImage: string = '';
 
   constructor(
@@ -27,6 +27,6 @@ export class JugDerechoComponent implements OnInit {
 
   navigate() {
     console.log('url img candidato', this.leftCandidateImage)
-    this.router.navigateByUrl('/sentimientos');
+    this.router.navigateByUrl('/home');
   }
 }

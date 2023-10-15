@@ -1,20 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-@Component({
-  selector: 'app-jug-izquierdo',
-  templateUrl: './jug-izquierdo.component.html',
-  styleUrls: ['./jug-izquierdo.component.css']
-})
-export class JugIzquierdoComponent implements OnInit{
-  leftCandidateImage: string = '';
+import { JugIzquierdoComponent } from './jug-izquierdo.component';
 
-  constructor(
-    private activatedRoute: ActivatedRoute
-  ) { }
+describe('JugIzquierdoComponent', () => {
+  let component: JugIzquierdoComponent;
+  let fixture: ComponentFixture<JugIzquierdoComponent>;
 
-  ngOnInit(): void {
-    this.leftCandidateImage = this.activatedRoute.snapshot.params['leftCandidateImage'];  // Get the leftCandidateImage parameter from the params property
-  }
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [JugIzquierdoComponent]
+    });
+    fixture = TestBed.createComponent(JugIzquierdoComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-}
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

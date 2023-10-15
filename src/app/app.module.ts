@@ -11,6 +11,11 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { CandidateService } from './shared/candidate.service';
 import { JugIzquierdoComponent } from './jug-izquierdo/jug-izquierdo.component';
 import { JugDerechoComponent } from './jug-derecho/jug-derecho.component';
+import { SentimientosComponent } from './sentimientos/sentimientos.component';
+import { SentimientosNegativosComponent } from './sentimientos-negativos/sentimientos-negativos.component';
+import { AnalisisTweetsComponent } from './analisis-tweets/analisis-tweets.component';
+import { DebateCandidatosComponent } from './debate-candidatos/debate-candidatos.component';
+import { GanadorComponent } from './ganador/ganador.component';
 
 
 @NgModule({
@@ -23,6 +28,11 @@ import { JugDerechoComponent } from './jug-derecho/jug-derecho.component';
     CarouselComponent,
     JugIzquierdoComponent,
     JugDerechoComponent,
+    SentimientosComponent,
+    SentimientosNegativosComponent,
+    AnalisisTweetsComponent,
+    DebateCandidatosComponent,
+    GanadorComponent,
 
   ],
   imports: [
