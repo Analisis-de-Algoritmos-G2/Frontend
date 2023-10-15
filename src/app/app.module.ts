@@ -9,6 +9,9 @@ import { FightComponent } from './fight/fight.component';
 import { TextCarouselComponent } from './text-carousel/text-carousel.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CandidateService } from './shared/candidate.service';
+import { JugIzquierdoComponent } from './jug-izquierdo/jug-izquierdo.component';
+import { JugDerechoComponent } from './jug-derecho/jug-derecho.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { CandidateService } from './shared/candidate.service';
     RulesComponent,
     FightComponent,
     TextCarouselComponent,
-    CarouselComponent
+    CarouselComponent,
+    JugIzquierdoComponent,
+    JugDerechoComponent,
+
   ],
   imports: [
     BrowserModule,

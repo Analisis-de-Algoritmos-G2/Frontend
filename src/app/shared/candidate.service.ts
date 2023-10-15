@@ -5,6 +5,9 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class CandidateService {
+  getCandidateImage(left: string | undefined): string {
+    throw new Error('Method not implemented.');
+  }
   private selectedCandidates = new BehaviorSubject<{ left?: string; right?: string }>({});
 
   getSelectedCandidates() {
