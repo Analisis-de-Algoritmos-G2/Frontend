@@ -1,7 +1,94 @@
-.content-container {
-    position: relative;
-    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
-    text-align: center;
-    padding: 20px;
-    color: #fff; /* Ajusta el color del texto según tu diseño */
-  }
+/* Estilos para la imagen del candidato */
+.candidate-image {
+  display: block; /* Evita espacio extra alrededor de la imagen */
+  max-width: 100%; /* Opcional: para asegurar que la imagen no sobrepase su contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  position: relative; /* 'relative', 'absolute', o 'fixed' dependiendo de tu layout */
+  z-index: 2; /* Asegúrate de que este número sea adecuado para que la imagen no quede oculta detrás de otros elementos */
+}
+
+/* Si tu imagen está posicionada de manera absoluta, es posible que necesites posicionar su contenedor relativo a ella */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  margin-left: 120px;
+  margin-top: 70px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px; /* Ajusta según tus necesidades */
+  height: 550px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Asegura que el recuadro esté encima del fondo */
+  background-color: rgba(255, 255, 255, 0.202);
+  font-family: 'ArcadeGamer', sans-serif;
+  font-size: 0.7em;
+  gap: 30px;
+}
+
+.info-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 70px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 730px; /* Ajusta según tus necesidades */
+  height: 550px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Asegura que el recuadro esté encima del fondo */
+  background-color: rgba(255, 255, 255, 0.202);
+  font-family: 'ArcadeGamer', sans-serif;
+  font-size: 0.7em;
+  gap: 30px;
+}
+
+.full {
+  display: flex;
+  gap: 20px;
+}
+
+.top-box {
+  position: relative;
+  margin-right: 120px;
+  margin-left: 120px;
+  color: #f0f8ff;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  top: 40px; /* Ajusta según dónde quieras que aparezca en la parte superior */
+  width: 80%; /* Ajusta según tus necesidades */
+  height: 68px;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Asegura que el recuadro esté encima del fondo */
+  background: linear-gradient(to right, rgb(8, 0, 255), #5c83e6);
+  font-family: 'ArcadeGamer', sans-serif;
+}
+.title-text {
+  font-size: 1.5em;
+}
+
+.center-button {
+  display: block; /* Aseguramos que el botón sea un bloque para aplicar márgenes */
+  margin-right: 220px;
+  margin-left: 200px;/* Margen superior e inferior de 40px y centrado horizontalmente */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  background-color: red; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Eliminar el borde por defecto */
+  border-radius: 30px; /* Esquinas redondeadas */
+  cursor: pointer; /* Cambiar el cursor al pasar el ratón sobre el botón */
+  font-size: 1.2em; /* Tamaño del texto */
+  position: relative; /* Asegura un posicionamiento relativo */
+  z-index: 10;
+  width: 70%;
+  font-family: 'ArcadeGamer', sans-serif;
+  top: 35px;
+}
+
+.center-button:hover {
+  background-color: #45a049; /* Cambiar el color de fondo al pasar el ratón sobre el botón */
+}

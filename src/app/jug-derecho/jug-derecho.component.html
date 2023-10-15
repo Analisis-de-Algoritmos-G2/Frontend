@@ -1,1 +1,16 @@
-<p>jug-derecho works!</p>
+<div class="top-box">
+  <h1 class="title-text">{{ titleText }}</h1> <!-- Asegúrate de que esto refleja la propiedad correcta -->
+</div>
+
+<div class="full">
+  <div class="image-container">
+    <img [src]="leftCandidateImage" alt="Imagen del Candidato" *ngIf="leftCandidateImage" class="candidate-image"> <!-- Verifica que 'leftCandidateImage' sea correcto -->
+  </div>
+  <div class="info-container">
+    <h1>HOLA</h1>
+  </div>
+</div>
+
+<button class="center-button" (click)="navigate()">
+  Siguiente
+</button>

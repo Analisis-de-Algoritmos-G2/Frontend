@@ -1,8 +1,16 @@
-<div class="background-image"></div> <!-- La imagen de fondo -->
-<div class="content-container">
-  <h1>Jugador 1</h1>
-  <img [src]="selectedCandidates.left || ''" alt="Imagen Jugador Izquierdo">
+<div class="top-box">
+  <h1 class="title-text">{{ titleText }}</h1> <!-- Asegúrate de que esto refleja la propiedad correcta -->
 </div>
-<button class="center-button" >
-  siguiente
+
+<div class="full">
+  <div class="image-container">
+    <img [src]="leftCandidateImage" alt="Imagen del Candidato" *ngIf="leftCandidateImage" class="candidate-image"> <!-- Verifica que 'leftCandidateImage' sea correcto -->
+  </div>
+  <div class="info-container">
+    <h1>HOLA</h1>
+  </div>
+</div>
+
+<button class="center-button" (click)="navigate()">
+  Siguiente
 </button>

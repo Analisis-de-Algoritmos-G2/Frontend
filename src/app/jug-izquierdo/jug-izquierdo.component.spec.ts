@@ -7,7 +7,12 @@ import { CandidateService } from '../shared/candidate.service';
   styleUrls: ['./jug-izquierdo.component.css']
 })
 export class JugIzquierdoComponent implements OnInit {
+navigate() {
+throw new Error('Method not implemented.');
+}
   selectedCandidates: { left?: string; right?: string } = {}; // Declarar la propiedad
+leftCandidateImage: any;
+titleText: any;
 
   constructor(private candidateService: CandidateService) { }
 
