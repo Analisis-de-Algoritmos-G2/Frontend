@@ -5,9 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class CandidateService {
-  getCandidateImage(left: string | undefined): string {
-    throw new Error('Method not implemented.');
-  }
+
   private selectedCandidates = new BehaviorSubject<{ left?: string; right?: string }>({});
 
   getSelectedCandidates() {
@@ -19,4 +17,9 @@ export class CandidateService {
     const newSelection = { ...currentSelection, [side]: candidate };
     this.selectedCandidates.next(newSelection);
   }
+  getCandidateImage(candidate: string) {
+    // Implement this method to return the URL of the image for the specified candidate.
+    return `/assets/images/${candidate}.png`;
+  }
+
 }

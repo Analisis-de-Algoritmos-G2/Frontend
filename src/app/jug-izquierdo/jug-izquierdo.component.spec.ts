@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { CandidateService } from '../shared/candidate.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-jug-izquierdo',
   templateUrl: './jug-izquierdo.component.html',
   styleUrls: ['./jug-izquierdo.component.css']
 })
-export class JugIzquierdoComponent implements OnInit {
-  selectedCandidates: { left?: string; right?: string } = {}; // Declarar la propiedad
+export class JugIzquierdoComponent implements OnInit{
+  leftCandidateImage: string = '';
 
-  constructor(private candidateService: CandidateService) { }
+  constructor(
+    private activatedRoute: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
-    // Suscríbete al Observable para obtener las selecciones
-    this.candidateService.getSelectedCandidates().subscribe(selection => {
-      this.selectedCandidates = selection;
-    });
+    this.leftCandidateImage = this.activatedRoute.snapshot.params['leftCandidateImage'];  // Get the leftCandidateImage parameter from the params property
   }
+
 }
