@@ -14,7 +14,8 @@
   width: 80%;
   font-family: 'ArcadeGamer', sans-serif;
   top: 350px;
-  right: -140px;
+  left: 140px;
+  right: 140px;
 }
 
 .center-button:hover {
@@ -29,6 +30,7 @@
   align-items: center;
   top: 40px; /* Ajusta según dónde quieras que aparezca en la parte superior */
   left: 50%; /* Esto, junto con 'transform', centra el recuadro horizontalmente */
+  right: 50%;
   transform: translateX(-50%); /* Centra el recuadro horizontalmente */
   width: 90%; /* Ajusta según tus necesidades */
   height: 12%;
