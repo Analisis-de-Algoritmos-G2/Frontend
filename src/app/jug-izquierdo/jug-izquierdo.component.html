@@ -1,17 +1,16 @@
-<div class="top-box-info">
-  <h1 class="title-text">Nombre Candidato</h1>
+<div class="top-box">
+  <h1 class="title-text">{{ titleText }}</h1> <!-- Asegúrate de que esto refleja la propiedad correcta -->
 </div>
-<div class="container-candi">
-  <div class="content">
-    <div class="carousel-container">
-      <app-carousel side="left" [currentSlideIndex]="0"></app-carousel>
-    </div>
-    <div class="text-and-image">
-      <p>Las principales caracteristicas frente a el tema de  ...  son:</p>
-      <img src="tu-imagen.jpg">
-    </div>
+
+<div class="full">
+  <div class="image-container">
+    <img [src]="leftCandidateImage" alt="Imagen del Candidato" *ngIf="leftCandidateImage" class="candidate-image"> <!-- Verifica que 'leftCandidateImage' sea correcto -->
+  </div>
+  <div class="info-container">
+    <h1>Las principales caracteristicas frente a el tema de ... son:</h1>
   </div>
 </div>
+
 <button class="center-button" (click)="navigate()">
-  Siguiente 
+  Siguiente
 </button>

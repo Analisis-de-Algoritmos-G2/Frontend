@@ -11,7 +11,6 @@ import { ThemeService } from '../shared/theme.service';
 export class FightComponent implements OnInit{
   selectedTheme: string = 'Seguridad';
   selectedCandidates: { left?: string; right?: string } = {left:'NONE', right:'NONE'};  // Declara la propiedad para almacenar las selecciones
-  leftCandidateImage: string = ''; // Add this line
 
   constructor(
     private router: Router,
@@ -30,19 +29,14 @@ export class FightComponent implements OnInit{
     this.candidateService.getSelectedCandidates().subscribe(
       selection => {
         this.selectedCandidates = selection;
-       console.log('updated selection', this.selectedCandidates);
-        
-        if (selection.left) {
-          this.leftCandidateImage = this.candidateService.getCandidateImage(selection.left);
-          console.log('url img candidato', this.leftCandidateImage)
-        }
+        console.log('Updated selection:', this.selectedCandidates);  // Log updated selection
       }
     );
   }
 
   navigate() {
-    console.log('url img candidato', this.leftCandidateImage)
-    this.router.navigateByUrl('/jug-izquierdo', { state: { leftCandidateImage: this.leftCandidateImage } });
-
+    console.log('Selected candidates:', this.selectedCandidates, 'Selected Topic: ', this.selectedTheme); // Log selected candidates
+    this.router.navigateByUrl('/jug-izquierdo');
   }
+
 }

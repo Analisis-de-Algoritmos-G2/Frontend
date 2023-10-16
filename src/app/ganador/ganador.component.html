@@ -1,17 +1,16 @@
-<div class="top-box-info">
-    <h1 class="title-text">GANADOR!</h1>
+<div class="top-box">
+  <h1 class="title-text">GANADOR!</h1> <!-- Asegúrate de que esto refleja la propiedad correcta -->
+</div>
+
+<div class="full">
+  <div class="image-container">
+    <img [src]="leftCandidateImage" alt="Imagen del Candidato" *ngIf="leftCandidateImage" class="candidate-image"> <!-- Verifica que 'leftCandidateImage' sea correcto -->
   </div>
-  <div class="container-candi">
-    <div class="content">
-      <div class="carousel-container">
-        <app-carousel side="left" [currentSlideIndex]="0"></app-carousel>
-      </div>
-      <div class="text-and-image">
-        <p>Segun la informacion recopilada y analizada, en materia de Seguridad --- tiene una mejor imagen frente a su rival ---, sin embargo, se debe tener en cuenta su sentimiento negativo destacado puesto que podria afectarle en las elecciones. </p>
-      </div>
-    </div>
+  <div class="info-container">
+    <h1>HOLA</h1>
   </div>
-  <button class="center-button" (click)="navigate()">
-    Jugar de Nuevo
-  </button>
-  
+</div>
+
+<button class="center-button" (click)="navigate()">
+  Siguiente
+</button>

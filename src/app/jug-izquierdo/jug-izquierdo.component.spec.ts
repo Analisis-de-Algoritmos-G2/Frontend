@@ -1,21 +1,25 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, OnInit } from '@angular/core';
+import { CandidateService } from '../shared/candidate.service';
 
-import { JugIzquierdoComponent } from './jug-izquierdo.component';
+@Component({
+  selector: 'app-jug-izquierdo',
+  templateUrl: './jug-izquierdo.component.html',
+  styleUrls: ['./jug-izquierdo.component.css']
+})
+export class JugIzquierdoComponent implements OnInit {
+navigate() {
+throw new Error('Method not implemented.');
+}
+  selectedCandidates: { left?: string; right?: string } = {}; // Declarar la propiedad
+leftCandidateImage: any;
+titleText: any;
 
-describe('JugIzquierdoComponent', () => {
-  let component: JugIzquierdoComponent;
-  let fixture: ComponentFixture<JugIzquierdoComponent>;
+  constructor(private candidateService: CandidateService) { }
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [JugIzquierdoComponent]
+  ngOnInit(): void {
+    // Suscríbete al Observable para obtener las selecciones
+    this.candidateService.getSelectedCandidates().subscribe(selection => {
+      this.selectedCandidates = selection;
     });
-    fixture = TestBed.createComponent(JugIzquierdoComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  }
+}
