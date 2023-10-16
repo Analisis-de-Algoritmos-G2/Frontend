@@ -7,10 +7,13 @@
     <img [src]="leftCandidateImage" alt="Imagen del Candidato" *ngIf="leftCandidateImage" class="candidate-image"> <!-- Verifica que 'leftCandidateImage' sea correcto -->
   </div>
   <div class="info-container">
-    <h1>HOLA</h1>
+    <h1>Segun la informacion recopilada y analizada, en materia de {{ selectedTheme }} 
+      .... tiene una mejor imagen frente a su rival .... , 
+      sin embargo, se debe tener en cuenta su sentimiento negativo destacado puesto 
+      que podria afectarle en las elecciones. </h1>
   </div>
 </div>
 
 <button class="center-button" (click)="navigate()">
-  Siguiente
+  Volver a jugar
 </button>

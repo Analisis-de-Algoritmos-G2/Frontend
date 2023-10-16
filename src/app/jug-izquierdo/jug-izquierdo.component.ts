@@ -10,9 +10,10 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./jug-izquierdo.component.css']
 })
 export class JugIzquierdoComponent implements OnInit, OnDestroy {
-  selectedTheme: string = 'Seguridad';
+
   selectedCandidates: { left?: string; right?: string } = {};
   leftCandidateImage: string = '';
+  selectedTheme: string = ' ';
   titleText: string = 'Candidato';
   private subscriptions: Subscription = new Subscription();
 
@@ -37,8 +38,8 @@ export class JugIzquierdoComponent implements OnInit, OnDestroy {
 
     // Suscríbete al tema seleccionado.
     const themeSubscription = this.themeService.getSelectedTheme().subscribe(theme => {
-      this.selectedTheme = theme;
-      console.log(theme);
+      this.selectedTheme =theme ;
+      console.log('temasuscrito:',theme);
     });
 
     this.subscriptions.add(themeSubscription);
@@ -70,10 +71,11 @@ export class JugIzquierdoComponent implements OnInit, OnDestroy {
       'Robledo': 'Jorge Enrique Robledo',
       'Vargas': 'Jorge Luis Vargas',
     };
-
     console.log('El text es: ', text[candidate])
     return text[candidate]; // devuelve una imagen predeterminada o manténla vacía si el candidato no existe
   }
+
+
   navigate() {
     console.log('Selected candidates:', this.selectedCandidates, 'Selected Topic: ', this.selectedTheme); // Log selected candidates
     this.router.navigateByUrl('/jug-derecho');
