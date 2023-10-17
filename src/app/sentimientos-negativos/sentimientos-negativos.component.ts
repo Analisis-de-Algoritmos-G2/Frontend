@@ -117,3 +117,5 @@ export class SentimientosNegativosComponent {
     this.subscriptions.unsubscribe();
   }
 }
+
+

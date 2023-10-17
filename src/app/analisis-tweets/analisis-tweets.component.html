@@ -1,10 +1,18 @@
 <div class="top-box">
-  <h1 class="title-text">DE LOS TWEETS ANALIZADOS POR CADA CANDIDATO SE TIENE LA SIGUIENTE PERSPECTIVA:</h1>
+  <h1 class="title-text">DE LOS TWEETS ANALIZADOS POR CADA CANDIDATO SE TIENE LA SIGUIENTE PERSPECTIVA</h1>
 </div>
 
 <div class="full">
   <div class="candidate-container">
+    <div class="candidate-right">
+      
+      <img [src]="rightCandidateImage" alt="Imagen del Candidato 2" *ngIf="rightCandidateImage" class="candidate-image">
+      <div class="top-box2">
+        <h2>{{ titleTextCand1 }}</h2>
+       </div>
+    </div>
     <div class="candidate-left">
+      
       <img [src]="leftCandidateImage" alt="Imagen del Candidato 1" *ngIf="leftCandidateImage" class="candidate-image">
       <div class="top-box2">
        <h2>{{ titleTextCand2 }}</h2>
@@ -12,12 +20,6 @@
       <div class="custom-text">
 
       </div>
-    </div>
-    <div class="candidate-right">
-      <img [src]="rightCandidateImage" alt="Imagen del Candidato 2" *ngIf="rightCandidateImage" class="candidate-image">
-      <div class="top-box2">
-        <h2>{{ titleTextCand1 }}</h2>
-       </div>
     </div>
   </div>
 </div>
