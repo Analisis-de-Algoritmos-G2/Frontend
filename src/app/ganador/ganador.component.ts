@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./ganador.component.css']
 })
 export class GanadorComponent {
-  
+
   selectedTheme: string = 'Seguridad';
   selectedCandidates: { left?: string; right?: string } = {};
   leftCandidateImage: string = '';
@@ -56,8 +56,6 @@ export class GanadorComponent {
       'Robledo': '/assets/images/robledo.png',
       'Vargas': '/assets/images/vargas.png',
     };
-
-    console.log('La imagen es; ', images[candidate])
     return images[candidate];
   }
 

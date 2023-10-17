@@ -4,8 +4,15 @@
 
 <div class="full">
   <div class="candidate-container">
+    <div class="candidate-right">
+      <h2 class="tweet">{{ tweetTextCand1 }}</h2>
+      <img [src]="rightCandidateImage" alt="Imagen del Candidato 2" *ngIf="rightCandidateImage" class="candidate-image">
+      <div class="top-box2">
+        <h2>{{ titleTextCand1 }}</h2>
+       </div>
+    </div>
     <div class="candidate-left">
-      <h2>{{ tweetTextCand2 }}</h2>
+      <h2 class="tweet">{{ tweetTextCand2 }}</h2>
       <img [src]="leftCandidateImage" alt="Imagen del Candidato 1" *ngIf="leftCandidateImage" class="candidate-image">
       <div class="top-box2">
        <h2>{{ titleTextCand2 }}</h2>
@@ -13,12 +20,6 @@
       <div class="custom-text">
 
       </div>
-    </div>
-    <div class="candidate-right">
-      <img [src]="rightCandidateImage" alt="Imagen del Candidato 2" *ngIf="rightCandidateImage" class="candidate-image">
-      <div class="top-box2">
-        <h2>{{ titleTextCand1 }}</h2>
-       </div>
     </div>
   </div>
 </div>

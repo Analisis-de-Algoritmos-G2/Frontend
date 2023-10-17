@@ -61,7 +61,6 @@ export class AnalisisTweetsComponent {
       'Vargas': '/assets/images/vargas.png',
     };
 
-    console.log('La imagen es; ', images[candidate])
     return images[candidate];
   }
 

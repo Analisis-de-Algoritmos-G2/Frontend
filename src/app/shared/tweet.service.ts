@@ -12,7 +12,7 @@ export class TweetService {
 
   constructor(private http: HttpClient) { }
 
-  getTweet(candidateName: string, topic: string): Observable<String> {
+  getTweet(candidateName: string, topic: string): Observable<string> {
     const body = { candidate_name: candidateName, topic: topic};
     return this.http.post(this.apiUrl, body, { responseType: 'text' });
   }

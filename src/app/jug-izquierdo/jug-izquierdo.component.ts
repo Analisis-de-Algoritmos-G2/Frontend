@@ -57,8 +57,6 @@ export class JugIzquierdoComponent implements OnInit, OnDestroy {
       'Robledo': '/assets/images/robledo.png',
       'Vargas': '/assets/images/vargas.png',
     };
-
-    console.log('La imagen es; ', images[candidate])
     return images[candidate];
   }
 
@@ -89,7 +87,6 @@ export class JugIzquierdoComponent implements OnInit, OnDestroy {
       const blob: Blob = new Blob([data], { type: 'image/png' });
       const imageUrl = URL.createObjectURL(blob);
       this.wordCloudImage = imageUrl;
-      console.log('La imagen es: ', this.wordCloudImage);// Aquí se actualiza la URL de la imagen
     }, error => {
       console.error('Hubo un error al obtener la nube de palabras: ', error);
     });

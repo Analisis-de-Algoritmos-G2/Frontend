@@ -29,7 +29,6 @@ export class FightComponent implements OnInit{
     this.candidateService.getSelectedCandidates().subscribe(
       selection => {
         this.selectedCandidates = selection;
-        console.log('Updated selection:', this.selectedCandidates);  // Log updated selection
       }
     );
   }

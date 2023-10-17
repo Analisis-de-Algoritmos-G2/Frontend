@@ -64,8 +64,6 @@ export class SentimientosNegativosComponent {
       'Robledo': '/assets/images/robledo.png',
       'Vargas': '/assets/images/vargas.png',
     };
-
-    console.log('La imagen es; ', images[candidate])
     return images[candidate];
   }
 
