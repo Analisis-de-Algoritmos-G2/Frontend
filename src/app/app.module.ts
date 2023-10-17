@@ -16,6 +16,7 @@ import { SentimientosNegativosComponent } from './sentimientos-negativos/sentimi
 import { AnalisisTweetsComponent } from './analisis-tweets/analisis-tweets.component';
 import { DebateCandidatosComponent } from './debate-candidatos/debate-candidatos.component';
 import { GanadorComponent } from './ganador/ganador.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { GanadorComponent } from './ganador/ganador.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [CandidateService],
   bootstrap: [AppComponent]

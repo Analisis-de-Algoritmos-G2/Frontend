@@ -3,14 +3,14 @@ import { CandidateService } from '../shared/candidate.service';
 import { ThemeService } from '../shared/theme.service';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-
+import { ImageService } from '../shared/image.service';
 @Component({
   selector: 'app-jug-izquierdo',
   templateUrl: './jug-izquierdo.component.html',
   styleUrls: ['./jug-izquierdo.component.css']
 })
 export class JugIzquierdoComponent implements OnInit, OnDestroy {
-
+  wordCloudImage: any = ''; // Variable para almacenar la URL de la imagen
   selectedCandidates: { left?: string; right?: string } = {};
   leftCandidateImage: string = '';
   selectedTheme: string = ' ';
@@ -20,7 +20,8 @@ export class JugIzquierdoComponent implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private candidateService: CandidateService,
-    private themeService: ThemeService
+    private themeService: ThemeService,
+    private imageService: ImageService
   ) { }
 
 
@@ -30,6 +31,7 @@ export class JugIzquierdoComponent implements OnInit, OnDestroy {
       if (candidates.left) {
         this.leftCandidateImage = this.getCandidateImage(candidates.left);
         this.titleText = this.getCandidateText(candidates.left);
+        this.loadWordCloud(candidates.left);
       }
       console.log(candidates);
     });
@@ -79,6 +81,18 @@ export class JugIzquierdoComponent implements OnInit, OnDestroy {
   navigate() {
     console.log('Selected candidates:', this.selectedCandidates, 'Selected Topic: ', this.selectedTheme); // Log selected candidates
     this.router.navigateByUrl('/jug-derecho');
+  }
+
+  // Método para cargar la nube de palabras
+  loadWordCloud(candidateName: string) {
+    this.imageService.getWordCloud(candidateName, this.selectedTheme).subscribe(data => {
+      const blob: Blob = new Blob([data], { type: 'image/png' });
+      const imageUrl = URL.createObjectURL(blob);
+      this.wordCloudImage = imageUrl;
+      console.log('La imagen es: ', this.wordCloudImage);// Aquí se actualiza la URL de la imagen
+    }, error => {
+      console.error('Hubo un error al obtener la nube de palabras: ', error);
+    });
   }
 
   ngOnDestroy(): void {

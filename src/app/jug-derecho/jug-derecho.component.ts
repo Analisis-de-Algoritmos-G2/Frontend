@@ -3,24 +3,26 @@ import { CandidateService } from '../shared/candidate.service';
 import { ThemeService } from '../shared/theme.service';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-
+import { ImageService } from '../shared/image.service';
 @Component({
   selector: 'app-jug-derecho',
   templateUrl: './jug-derecho.component.html',
   styleUrls: ['./jug-derecho.component.css']
 })
 export class JugDerechoComponent implements OnInit, OnDestroy{
-
+  wordCloudImage: any = '';
   selectedTheme: string = 'Seguridad';
   selectedCandidates: { left?: string; right?: string } = {};
   leftCandidateImage: string = '';
   titleText: string = 'Candidato 2';
+  showLoader: boolean = true;
   private subscriptions: Subscription = new Subscription();
 
   constructor(
     private router: Router,
     private candidateService: CandidateService,
-    private themeService: ThemeService
+    private themeService: ThemeService,
+    private imageService: ImageService
   ) { }
 
 
@@ -30,6 +32,7 @@ export class JugDerechoComponent implements OnInit, OnDestroy{
       if (candidates.right) {
         this.leftCandidateImage = this.getCandidateImage(candidates.right);
         this.titleText = this.getCandidateText(candidates.right);
+        this.loadWordCloud(candidates.right);
       }
       console.log(candidates);
     });
@@ -78,6 +81,18 @@ export class JugDerechoComponent implements OnInit, OnDestroy{
   navigate() {
     console.log('Selected candidates:', this.selectedCandidates, 'Selected Topic: ', this.selectedTheme); // Log selected candidates
     this.router.navigateByUrl('/sentimientos');
+  }
+
+  // Método para cargar la nube de palabras
+  loadWordCloud(candidateName: string) {
+    this.imageService.getWordCloud(candidateName, this.selectedTheme).subscribe(data => {
+      const blob: Blob = new Blob([data], { type: 'image/png' });
+      const imageUrl = URL.createObjectURL(blob);
+      this.wordCloudImage = imageUrl;
+      console.log('La imagen es: ', this.wordCloudImage);
+    }, error => {
+      console.error('Hubo un error al obtener la nube de palabras: ', error);
+    });
   }
 
   ngOnDestroy(): void {

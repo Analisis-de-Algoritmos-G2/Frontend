@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { CandidateService } from '../shared/candidate.service';  // Importa CandidateService
 import { ThemeService } from '../shared/theme.service';
 import { Subscription } from 'rxjs';
-
+import { TweetService } from '../shared/tweet.service';
 @Component({
   selector: 'app-sentimientos',
   templateUrl: './sentimientos.component.html',
@@ -14,6 +14,8 @@ export class SentimientosComponent {
   selectedCandidates: { left?: string; right?: string } = {};
   leftCandidateImage: string = '';
   rightCandidateImage: string = '';
+  tweetTextCand2: string = 'tweet 2';
+  tweetTextCand1: string = 'tweet 1';
   titleTextCand2: string = 'Candidato 2';
   titleTextCand1: string = 'Candidato 1';
   private subscriptions: Subscription = new Subscription();
@@ -21,7 +23,8 @@ export class SentimientosComponent {
   constructor(
     private router: Router,
     private candidateService: CandidateService,
-    private themeService: ThemeService
+    private themeService: ThemeService,
+    private tweetService: TweetService
   ) { }
 
 
@@ -31,6 +34,7 @@ export class SentimientosComponent {
       if (candidates.right) {
         this.leftCandidateImage = this.getCandidateImage(candidates.right);
         this.titleTextCand2 = this.getCandidateText(candidates.right);
+        this.tweetTextCand2 = this.getTweet(candidates.right, this.selectedTheme).toString();
       }
       if(candidates.left){
         this.rightCandidateImage = this.getCandidateImage(candidates.left);
@@ -81,6 +85,17 @@ export class SentimientosComponent {
     return text[candidate]; // devuelve una imagen predeterminada o manténla vacía si el candidato no existe
   }
 
+  getTweet(candidateName: string, topic: string) {
+    let text: String = '';
+    this.tweetService.getTweet(candidateName, topic).subscribe(response => {
+      text = response; // asumimos que la respuesta es el string del tweet
+    },
+      error => {
+        console.error('Hubo un error al obtener el tweet:', error);
+      }
+    );
+    return text;
+  }
   navigate() {
     console.log('url img candidato', this.leftCandidateImage)
     this.router.navigateByUrl('/sentimientos-negativos', { state: { leftCandidateImage: this.leftCandidateImage } });

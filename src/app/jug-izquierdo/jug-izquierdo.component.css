@@ -33,7 +33,7 @@
   margin-top: 70px;
   display: flex;
   justify-content: flex-start; /* Alineamos el texto en la parte superior */
- 
+
   align-items: center;
   width: 730px; /* Ajusta según tus necesidades */
   height: 550px;
@@ -45,13 +45,13 @@
   gap: 30px;
   color: white; /* Color de la fuente en blanco */
   flex-direction: column; /* Cambiamos la dirección a columna */
-  
+
 }
 
 .info-container h1 {
   font-size: 1em; /* Tamaño de fuente más pequeño para el texto */
   margin-top: 20px; /* Espacio entre la parte superior del contenedor y el texto */
-  margin-left: 20px; 
+  margin-left: 20px;
 }
 
 
@@ -80,6 +80,7 @@
 .title-text {
   font-size: 1.5em;
 }
+
 
 .center-button {
   display: block; /* Aseguramos que el botón sea un bloque para aplicar márgenes */
