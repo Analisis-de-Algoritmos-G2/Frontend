@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class TweetService {
   // URL de tu servidor Flask
   private apiUrl = 'http://127.0.0.1:5000/get_positive_tweet';
+  private apiUrlNeg = 'http://127.0.0.1:5000/get_negative_tweet';
 
   constructor(private http: HttpClient) { }
 
@@ -15,4 +16,11 @@ export class TweetService {
     const body = { candidate_name: candidateName, topic: topic};
     return this.http.post(this.apiUrl, body, { responseType: 'text' });
   }
+
+  getTweetNegative(candidateName: string, topic: string): Observable<String> {
+    const body = { candidate_name: candidateName, topic: topic};
+    return this.http.post(this.apiUrlNeg, body, { responseType: 'text' });
+  }
+
+
 }
