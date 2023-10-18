@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CandidateService } from '../shared/candidate.service';  // Importa CandidateService
 import { ThemeService } from '../shared/theme.service';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
+import { TweetService } from '../shared/tweet.service';
 
 @Component({
   selector: 'app-analisis-tweets',
@@ -16,12 +17,16 @@ export class AnalisisTweetsComponent {
   rightCandidateImage: string = '';
   titleTextCand2: string = 'Candidato 2';
   titleTextCand1: string = 'Candidato 1';
+  countData: any = null;
+  tweetTextCand2: string = 'analisis 2';
+  tweetTextCand1: string = 'analisis 1';
   private subscriptions: Subscription = new Subscription();
 
   constructor(
     private router: Router,
     private candidateService: CandidateService,
-    private themeService: ThemeService
+    private themeService: ThemeService,
+    private tweetService: TweetService
   ) { }
 
 
@@ -30,11 +35,29 @@ export class AnalisisTweetsComponent {
       this.selectedCandidates = candidates;
       if (candidates.right) {
         this.leftCandidateImage = this.getCandidateImage(candidates.right);
-        this.titleTextCand2 = this.getCandidateText(candidates.right);
+        const tweetSubscription = this.loadCountData(candidates.right).subscribe(
+          tweet => {
+            this.tweetTextCand2 = tweet;
+            console.log('El analisis es: ', this.tweetTextCand2);
+          },
+          error => {
+            console.error('Hubo un error al obtener el tweet:', error);
+          }
+        );
+        this.subscriptions.add(tweetSubscription);
       }
       if(candidates.left){
         this.rightCandidateImage = this.getCandidateImage(candidates.left);
-        this.titleTextCand1 = this.getCandidateText(candidates.left);
+        const tweetSubscription = this.loadCountData(candidates.left).subscribe(
+          tweet => {
+            this.tweetTextCand1 = tweet;
+            console.log('El analisis es: ', this.tweetTextCand1);
+          },
+          error => {
+            console.error('Hubo un error al obtener el tweet:', error);
+          }
+        );
+        this.subscriptions.add(tweetSubscription);
       }
       console.log(candidates);
     });
@@ -64,26 +87,14 @@ export class AnalisisTweetsComponent {
     return images[candidate];
   }
 
-  getCandidateText(candidate: string): string {
-    // Define 'images' como un objeto que puede ser indexado con claves de tipo 'string'.
-    const text: { [key: string]: string } = {
-      'Galan': 'Carlos Fernando Galan',
-      'Oviedo': 'Juan Daniel Oviedo',
-      'Bolivar': 'Gustavo Bolivar',
-      'Lara': 'Rodrigo Lara',
-      'Molano': 'Diego Molano',
-      'Robledo': 'Jorge Enrique Robledo',
-      'Vargas': 'Jorge Luis Vargas',
-    };
-
-    console.log('El text es: ', text[candidate])
-    return text[candidate]; // devuelve una imagen predeterminada o manténla vacía si el candidato no existe
+  public loadCountData(candidateName: string): Observable<string> {
+    return this.tweetService.getCount(candidateName);
   }
 
 
   navigate() {
     console.log('url img candidato', this.leftCandidateImage)
-    this.router.navigateByUrl('/debate-candidatos', { state: { leftCandidateImage: this.leftCandidateImage } });
+    this.router.navigateByUrl('/ganador', { state: { leftCandidateImage: this.leftCandidateImage } });
 
   }
   ngOnDestroy(): void {

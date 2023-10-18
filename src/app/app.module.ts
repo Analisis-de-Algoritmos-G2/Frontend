@@ -14,7 +14,6 @@ import { JugDerechoComponent } from './jug-derecho/jug-derecho.component';
 import { SentimientosComponent } from './sentimientos/sentimientos.component';
 import { SentimientosNegativosComponent } from './sentimientos-negativos/sentimientos-negativos.component';
 import { AnalisisTweetsComponent } from './analisis-tweets/analisis-tweets.component';
-import { DebateCandidatosComponent } from './debate-candidatos/debate-candidatos.component';
 import { GanadorComponent } from './ganador/ganador.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -32,7 +31,6 @@ import { HttpClientModule } from '@angular/common/http';
     SentimientosComponent,
     SentimientosNegativosComponent,
     AnalisisTweetsComponent,
-    DebateCandidatosComponent,
     GanadorComponent,
 
   ],

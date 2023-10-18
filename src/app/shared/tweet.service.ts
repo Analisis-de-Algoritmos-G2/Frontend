@@ -9,6 +9,8 @@ export class TweetService {
   // URL de tu servidor Flask
   private apiUrl = 'http://127.0.0.1:5000/get_positive_tweet';
   private apiUrlNeg = 'http://127.0.0.1:5000/get_negative_tweet';
+  private apiUrlCount = 'http://127.0.0.1:5000/get_count';
+  private apiUrlWinner = 'http://127.0.0.1:5000/get_winner';
 
   constructor(private http: HttpClient) { }
 
@@ -17,10 +19,18 @@ export class TweetService {
     return this.http.post(this.apiUrl, body, { responseType: 'text' });
   }
 
-  getTweetNegative(candidateName: string, topic: string): Observable<String> {
+  getTweetNegative(candidateName: string, topic: string): Observable<string> {
     const body = { candidate_name: candidateName, topic: topic};
     return this.http.post(this.apiUrlNeg, body, { responseType: 'text' });
   }
 
+  getCount(candidateName: string): Observable<string> {
+    const body = { candidate_name: candidateName};
+    return this.http.post(this.apiUrlCount, body, { responseType: 'text' });
+  }
 
+  getWinner(candidateName1: string, candidateName2: string): Observable<string> {
+    const body = { candidate_name1: candidateName1, candidate_name2: candidateName2};
+    return this.http.post(this.apiUrlWinner, body, { responseType: 'text' });
+  }
 }

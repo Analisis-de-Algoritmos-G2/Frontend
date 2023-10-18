@@ -5,10 +5,9 @@ import { RulesComponent } from './rules/rules.component';
 import { FightComponent } from './fight/fight.component';
 import { JugIzquierdoComponent } from './jug-izquierdo/jug-izquierdo.component';
 import { JugDerechoComponent } from './jug-derecho/jug-derecho.component';
-import { SentimientosComponent } from './sentimientos/sentimientos.component'; 
+import { SentimientosComponent } from './sentimientos/sentimientos.component';
 import { SentimientosNegativosComponent } from './sentimientos-negativos/sentimientos-negativos.component';
 import { AnalisisTweetsComponent } from './analisis-tweets/analisis-tweets.component';
-import { DebateCandidatosComponent } from './debate-candidatos/debate-candidatos.component';
 import { GanadorComponent } from './ganador/ganador.component';
 
 
@@ -22,9 +21,8 @@ const routes: Routes = [
   {path: 'sentimientos', component: SentimientosComponent},
   {path: 'sentimientos-negativos',component: SentimientosNegativosComponent},
   {path: 'analisis-tweets', component: AnalisisTweetsComponent},
-  {path: 'debate-candidatos', component: DebateCandidatosComponent},
   {path: 'ganador', component: GanadorComponent}
-  
+
 ];
 
 @NgModule({

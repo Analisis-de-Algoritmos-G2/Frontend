@@ -103,7 +103,7 @@ export class SentimientosNegativosComponent {
   }
   getTweetNegative(candidateName: string, topic: string): Observable<string> {
     // No necesitas una variable local; en su lugar, devuelve directamente el Observable.
-    return this.tweetService.getTweet(candidateName, topic);
+    return this.tweetService.getTweetNegative(candidateName, topic);
   }
 
   navigate() {
