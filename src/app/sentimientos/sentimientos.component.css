@@ -72,10 +72,12 @@
   background: linear-gradient(to right, rgb(8, 0, 255), #5c83e6);
   font-family: 'ArcadeGamer', sans-serif;
 }
+
 .title-text {
   font-size: 1.5em;
   align-items: center;
 }
+
 .tweet {
   font-size: 1.5em;
   align-items: center;
@@ -84,8 +86,10 @@
   font-size: 1em;
   color: aliceblue;
 }
+
 .center-button {
   display: block; /* Aseguramos que el botón sea un bloque para aplicar márgenes */
+  margin-top: 30px;
   margin-right: 220px;
   margin-left: 200px;/* Margen superior e inferior de 40px y centrado horizontalmente */
   padding: 10px 20px; /* Espaciado interno del botón */
@@ -101,15 +105,18 @@
   font-family: 'ArcadeGamer', sans-serif;
   top: 35px;
 }
+
 .center-button:hover {
   background-color: #45a049; /* Cambiar el color de fondo al pasar el ratón sobre el botón */
 }
+
 .candidate-container {
   display: flex;
   justify-content: space-between; /* Coloca a los candidatos uno a la izquierda y otro a la derecha */
   align-items: center;
   gap: 20px;
 }
+
 .candidate-left ,
 .candidate-right {
   text-align: center;
