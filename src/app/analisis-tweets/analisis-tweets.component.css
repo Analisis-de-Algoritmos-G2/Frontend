@@ -5,7 +5,7 @@
   height: auto; /* Mantiene la proporción de la imagen */
   position: relative; /* 'relative', 'absolute', o 'fixed' dependiendo de tu layout */
   z-index: 2; /* Asegúrate de que este número sea adecuado para que la imagen no quede oculta detrás de otros elementos */
- 
+
   max-height: 300px; /* Ajusta la altura máxima según tus necesidades */
 }
 
@@ -53,12 +53,14 @@
   align-items: center;
   gap: 20px;
 }
+
 .top-box {
-  position: relative;
-  margin-right: 120px;
-  margin-left: 120px;
+  position: absolute;
+  left: 50%;
   color: #f0f8ff;
+  transform: translateX(-50%);
   display:flex;
+  text-align: center;
   justify-content: center;
   align-items: center;
   top: 40px; /* Ajusta según dónde quieras que aparezca en la parte superior */
@@ -72,6 +74,15 @@
 }
 .title-text {
   font-size: 1.5em;
+  align-items: center;
+}
+.tweet {
+  font-size: 1.5em;
+  align-items: center;
+  z-index: 1;
+  font-family: 'ArcadeGamer', sans-serif;
+  font-size: 1em;
+  color: aliceblue;
 }
 .center-button {
   display: block; /* Aseguramos que el botón sea un bloque para aplicar márgenes */
